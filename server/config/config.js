@@ -18,3 +18,6 @@ process.env.URLDB = urlDB;
 process.env.TOKEN = '1h';
 //Seed
 process.env.SEED = process.env.SEED || 'secret';
+
+//Google Client
+process.env.CLIENT_ID = process.env.CLIENT_ID || '991459890147-ejae2dphae0ch5ujc9rarfh3v1jqtjgf.apps.googleusercontent.com';
