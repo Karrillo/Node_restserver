@@ -78,7 +78,7 @@ async function verify(token) {
 };
 
 
-app.post('/google', async (req, res) => {
+app.post('/google', async(req, res) => {
 
     let token = req.body.idToken;
 
@@ -156,6 +156,7 @@ app.post('/google', async (req, res) => {
             });
         }
     });
+
 });
 
 module.exports = app;

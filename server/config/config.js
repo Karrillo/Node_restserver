@@ -15,7 +15,7 @@ if (process.env.NODE_ENV === 'dev') {
 process.env.URLDB = urlDB;
 
 //Token
-process.env.TOKEN = '1h';
+process.env.TOKEN = '48h';
 //Seed
 process.env.SEED = process.env.SEED || 'secret';
 

@@ -13,16 +13,16 @@ let Schema = mongoose.Schema;
 let userSchema = new Schema({
     name: {
         type: String,
-        required: [true, 'El nombre es necesario']
+        required: [true, 'The name is necessary']
     },
     email: {
         type: String,
         unique: true,
-        required: [true, 'El correo es necesario']
+        required: [true, 'The email is necessary']
     },
     password: {
         type: String,
-        required: [true, 'La clave es necesaria']
+        required: [true, 'The password is necessary']
     },
     img: {
         type: String,
