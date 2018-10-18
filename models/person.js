@@ -19,8 +19,7 @@ let personSchema = new Schema({
     },
     typeIdentification: {
         type: String,
-        required: true,
-        enum: typeValidator
+        required: true
     },
     province: {
         type: String,
