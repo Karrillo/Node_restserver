@@ -24,6 +24,30 @@ let verifyToken = (req, res, next) => {
     });
 };
 
+//Img
+let verifyTokenImg = (req, res, next) => {
+
+    let token = req.query.token;
+
+    jwt.verify(token, process.env.SEED, (err, decoded) => {
+
+        if (err) {
+
+            return res.status(401).json({
+                ok: false,
+                err: {
+                    message: 'Token is invalisd'
+                }
+            });
+
+        }
+
+        req.user = decoded.user;
+        next();
+
+    });
+};
+
 //Admin user
 let verifyRol = (req, res, next) => {
 
@@ -45,4 +69,4 @@ let verifyRol = (req, res, next) => {
     }
 };
 
-module.exports = { verifyToken, verifyRol };
+module.exports = { verifyToken, verifyRol, verifyTokenImg };
